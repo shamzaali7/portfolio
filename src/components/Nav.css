@@ -6,3 +6,12 @@
 .Nav div{
     flex: 1;
 }
+.dark-mode {
+    color: white;
+}
+.dark-mode a {
+    color: white;
+}
+.dark-mode h1 {
+    color: white;
+}
