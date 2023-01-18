@@ -1,8 +1,9 @@
 import React from 'react';
+import "./Skills.css"
 
 function Skills(){
     return(
-        <div></div>
+        <div className="skills"></div>
     )
 }
 
