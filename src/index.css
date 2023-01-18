@@ -13,6 +13,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: rgb(255,255,255);
 }
 
 code {
@@ -21,17 +22,24 @@ code {
 }
 
 .bg-clr{
+  position: relative;
   background-image: url("./images/Home-Background.jpg");
+  background-color: rgba(0,0,0,0.5);
+}
+
+.nav-bar-pos{
+  position: fixed;
 }
 
 .home, .projects, .skills, .resume, .about-me{
-  padding-top: 4px;
+  padding-top: 75px;
+  color: rgb(0,0,0)
 }
 
 .menu-items:hover{
-  color: rgb(27,18,31);
+  color: rgb(255,255,255);
   border-bottom-width: 2px;
-  border-bottom-color: rgb(27,18,31);
+  border-bottom-color: rgb(255,255,255);
 }
 
 .home{
@@ -42,20 +50,33 @@ code {
   background-size: cover;
 }
 
+
+
+.ovlay{
+  background-image: none;
+  background-color: rgba(0,0,0,0.8);
+}
+
 @media screen and (max-width: 1280px){
-  .home, .projects, .skills, .resume, .about-me{
-    margin-top: 55px;
-    padding-top: 10px;
-  }
   .bg-clr{
-    background-image: none;
-    background-color:rgba(175,225,234,0.3);
+    position: absolute;
+  }
+  .home, .projects, .skills, .resume, .about-me{
+    position: relative;
+    padding-top: 75px;
+    color: white;
   }
   .menu-items:hover{
-    color: rgb(27,18,31);
     border-left-width: 2px;
-    border-left-color: rgb(27,18,31);
+    border-left-color: rgb(255,255,255);
     border-bottom-color: none;
     border-bottom-width: 0;
+  }
+  .bg-mobile-clr{
+    background-image: none;
+    background-color: rgba(0,0,0,0.4);
+  }
+  .mobile-nav-down{
+    margin-top: 56px;
   }
 }

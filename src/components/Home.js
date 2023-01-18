@@ -6,6 +6,7 @@ function Home(){
         <div className="home">
                   My Portfolio
                   <div>Hi, and welcome!</div>
+                  <div></div>
         </div>
     )
 }

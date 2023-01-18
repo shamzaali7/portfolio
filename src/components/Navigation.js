@@ -8,32 +8,32 @@ function Navigation() {
     return (
         <div className="bg-clr h-full w-full">
             {/* Code block starts */}
-            <nav className="w-full mx-auto hidden xl:block shadow">
+            <nav className="nav-bar-pos w-full mx-auto hidden xl:block shadow">
                 <div className="container px-6 justify-between h-16 flex items-center lg:items-stretch mx-auto">
                     <div className="h-full flex items-center">
                         <Link to="/">
                             <div className="mr-10 flex items-center">
-                                <h3 className="menu-items text-base text-slate-600 text-2xl tracking-normal leading-tight ml-3 hidden lg:block ml-11">Home</h3>
+                                <h3 className="menu-items text-base text-slate-800 text-2xl tracking-normal leading-tight ml-3 hidden lg:block ml-11">Home</h3>
                             </div>
                         </Link>
                     </div>
                     <div className="h-full xl:flex items-center justify-end hidden">
                         <ul className="pr-12 xl:flex items-center h-full hidden">
                             <Link to="/projects"> 
-                                <li className="menu-items cursor-pointer h-full flex items-center text-lg text-slate-600 tracking-normal border-white">Projects</li>
+                                <li className="menu-items cursor-pointer h-full flex items-center text-lg text-slate-800 tracking-normal border-white">Projects</li>
                             </Link>
                             <Link to="/skills">
-                                <li className="menu-items cursor-pointer h-full flex items-center text-lg text-slate-600 mx-10 tracking-normal">Skills</li>
+                                <li className="menu-items cursor-pointer h-full flex items-center text-lg text-slate-800 mx-10 tracking-normal">Skills</li>
                             </Link>
                             <Link to="/resume">
-                                <li className="menu-items cursor-pointer h-full flex items-center text-lg text-slate-600 mr-10 tracking-normal">Resume</li>
+                                <li className="menu-items cursor-pointer h-full flex items-center text-lg text-slate-800 mr-10 tracking-normal">Resume</li>
                             </Link>
                             <Link to="/about-me">
-                                <li className="menu-items cursor-pointer h-full flex items-center text-lg text-slate-600 tracking-normal mr-3">About Me</li>
+                                <li className="menu-items cursor-pointer h-full flex items-center text-lg text-slate-800 tracking-normal mr-3">About Me</li>
                             </Link>
                         </ul>
                     </div>
-                    <div className="flex items-center justify-end xl:hidden">
+                    <div className="flex items-center justify-end xl:hidden nav-bar-pos">
                         <ul className="p-2 border-r bg-clr absolute rounded top-0 left-0 right-0 shadow mt-16 md:mt-16 hidden">
                             <li className="flex md:hidden flex-col cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none justify-center">
                                 <Link to="/projects">
@@ -81,13 +81,10 @@ function Navigation() {
             {/* Navbar */}
             <nav>
                 <div className="py-4 px-6 w-full flex xl:hidden justify-between items-center bg-clr fixed top-0 z-40">
-                    <div className="w-24 text-slate-600">
-                        Welcome!
-                    </div>
                     <div>
-                        <div id="menu" className="text-slate-600" onClick={() => setShow(!show)}>
+                        <div id="menu" className="text-white" onClick={() => setShow(!show)}>
                             {show ? (
-                                " "
+                                <div className="mt-6"></div>
                             ) : (
                                 <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-menu-2" width={24} height={24} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -101,19 +98,19 @@ function Navigation() {
                 </div>
                 {/*Mobile responsive sidebar*/}
                 <div className={show ? "absolute xl:hidden w-full h-full transform -translate-x-0 z-40 mt-0" : "absolute xl:hidden w-full h-full transform -translate-x-full z-40 mt-0"} id="mobile-nav">
-                    <div className="bg-clr opacity-50 w-full h-full" onClick={() => setShow(!show)} />
-                    <div className="w-64 z-40 fixed overflow-y-auto z-40 top-0 bg-clr shadow h-full flex-col justify-between xl:hidden pb-4 transition duration-150 ease-in-out">
+                    <div className="ovlay opacity-50 w-full h-full" onClick={() => setShow(!show)} />
+                    <div className="mobile-nav-down w-64 z-40 fixed overflow-y-auto z-40 top-0 shadow h-full bg-mobile-clr flex-col justify-between xl:hidden pb-4 transition duration-150 ease-in-out">
                         <div className="px-6 h-full">
                             <div className="flex flex-col justify-between h-full w-full">
                                 <div>
                                     <div className="mt-6 flex w-full items-center justify-between">
                                         <div className="flex items-center justify-between w-full text-white">
                                             <Link to="/">
-                                                <div className="menu-items ml-3 text-slate-600 flex items-center">
+                                                <div className="menu-items ml-3 text-white flex items-center">
                                                     <p className="text-base">Home</p>
                                                 </div>
                                             </Link>
-                                            <div id="cross" className="text-slate-600" onClick={() => setShow(!show)}>
+                                            <div id="cross" className="text-white" onClick={() => setShow(!show)}>
                                                 <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-x" width={24} height={24} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                                     <path stroke="none" d="M0 0h24v24H0z" />
                                                     <line x1={18} y1={6} x2={6} y2={18} />
@@ -124,7 +121,7 @@ function Navigation() {
                                     </div>
                                     <ul className="f-m-m">
                                         <Link to="/projects" className="cursor-pointer">
-                                            <li className="text-slate-600 pt-10">
+                                            <li className="text-white pt-10">
                                                 <div className="menu-items flex items-center">
                                                     <div className=" w-6 h-6 md:w-8 md:h-8">
                                                         <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-grid" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -140,7 +137,7 @@ function Navigation() {
                                             </li>
                                         </Link>
                                         <Link to="/skills" className="cursor-pointer">
-                                            <li className="text-slate-600 pt-8">
+                                            <li className="text-white pt-8">
                                                 <div className="menu-items flex items-center justify-between">
                                                     <div className="flex items-center">
                                                         <div className="w-6 h-6 md:w-8 md:h-8">
@@ -155,7 +152,7 @@ function Navigation() {
                                             </li>
                                         </Link>
                                         <Link to="/resume" className="cursor-pointer">
-                                            <li className="text-slate-600 pt-8">
+                                            <li className="text-white pt-8">
                                                 <div className="menu-items flex items-center">
                                                     <div className="w-6 h-6 md:w-8 md:h-8 ">
                                                         <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-compass" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -169,7 +166,7 @@ function Navigation() {
                                             </li>
                                         </Link>
                                         <Link to="/about-me" className="cursor-pointer">
-                                            <li className="text-slate-600 pt-8 cursor-pointer">
+                                            <li className="text-white pt-8 cursor-pointer">
                                                 <div className="menu-items flex items-center justify-between">
                                                     <div className="flex items-center">
                                                         <div className="w-6 h-6 md:w-8 md:h-8">
