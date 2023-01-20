@@ -1,7 +1,47 @@
 .about-me{
-    background-image: url("../images/About-Me-Background.jpg");
+    background-image: url("../images/Home-Background.jpg");
     height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
   }
+
+.about-me div{
+  flex: 1;
+}
+
+.about-me .buff{
+  flex: .55;
+}
+
+.about-description{
+  border-width: 1.5px;
+  border-color: rgb(255,255,255);
+  background-color: rgb(51 65 85);
+  color: rgb(255,255,255);
+  border-radius: 1.5px;
+  padding: 1.5px;
+}
+
+.about-me .contact-form{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-form div{
+  flex: 1;
+  text-align: center;
+}
+
+.about-request{
+  color: rgb(255,255,255);
+}
+
+.mail-img{
+  color: white;
+  margin-left: 8px;
+}
