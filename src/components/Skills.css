@@ -4,4 +4,15 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
   }
+
+.skills div{
+  flex: 1;
+}
+
+.skills div.buff{
+  flex: .2;
+  font-size: 20px;
+}

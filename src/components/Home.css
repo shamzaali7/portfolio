@@ -1,9 +1,12 @@
 .pro-pic{
-    border-radius: 150px;
     height: 225px;
     width: 150px;
     filter: blur(4px);
     -webkit-filter: blur(4px);
+}
+
+.profile-pic .pro-pic{
+    border-radius: 150px;
 }
 
 .home-title{
@@ -60,6 +63,10 @@
     border-width: 2px;
     border-color: rgb(255,255,255);
     padding: 2px;
+}
+
+.image-holder{
+    margin-top: 30px;
 }
 
 .image-holder:hover{

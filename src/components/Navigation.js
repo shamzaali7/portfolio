@@ -13,7 +13,9 @@ function Navigation() {
                     <div className="h-full flex items-center">
                         <Link to="/">
                             <div className="mr-10 flex items-center">
-                                <h3 className="menu-items text-base text-slate-800 text-2xl tracking-normal leading-tight ml-3 hidden lg:block ml-11">Home</h3>
+                                <h3 className="menu-items text-base text-slate-800 text-2xl tracking-normal leading-tight ml-3 hidden lg:block ml-11">
+                                    <span className="material-symbols-outlined">home</span>
+                                </h3>
                             </div>
                         </Link>
                     </div>
