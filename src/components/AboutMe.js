@@ -5,7 +5,11 @@ function AboutMe(){
     return(
         <div className="about-me">
             <div className="buff"></div>
-            <div className=""><span className="about-description">About Description</span></div>
+            <div className="container-about-me">
+                <div></div>
+                <div className="about-des about-description"><span>About Description</span></div>
+                <div></div>
+            </div>
             <div className="contact-form"><span>
                 <div className="about-request">Contact Me!</div>
                 <div>

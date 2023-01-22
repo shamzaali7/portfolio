@@ -16,13 +16,26 @@
   flex: .55;
 }
 
+.container-about-me{
+  display: flex;
+  flex-direction: row;
+}
+
+.container-about-me div{
+  flex: 1;
+}
+
+.container-about-me .about-des{
+  border-radius: 8px;
+}
+
 .about-description{
   border-width: 1.5px;
-  border-color: rgb(255,255,255);
-  background-color: rgb(51 65 85);
-  color: rgb(255,255,255);
+  border-color: rgb(0,0,0);
+  color: rgb(0,0,0);
   border-radius: 1.5px;
   padding: 1.5px;
+  background-color: rgba(255,255,255,0.5);
 }
 
 .about-me .contact-form{
