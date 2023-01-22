@@ -6,12 +6,12 @@ function Home(){
         <div className="home">
             <div className="home-title mt-10">
                 <div className=""></div>
-                <div><span className="text-2xl ml-20 name">Syed Hamza Ali</span></div>
+                <div className="item-title"><span className="text-2xl ml-20 name">Syed Hamza Ali</span></div>
                 <div></div>
             </div>
             <div className="home-title">
                 <div className=""></div>
-                <div><span className="change-margin-title text-xs mt-1 name">Junior Software Engineer</span></div>
+                <div className="item-title"><span className="change-margin-title text-xs mt-1 name">Junior Software Engineer</span></div>
                 <div></div>
             </div>
             <div className="home-picture">

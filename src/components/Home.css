@@ -1,3 +1,11 @@
+.home{
+    background-image: url("../images/Home-Background.jpg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .pro-pic{
     height: 225px;
     width: 150px;
@@ -49,8 +57,8 @@
     background-color: rgb(51 65 85);
     border-radius: 6px;
     border-width: 1.5px;
-    border-color: rgb(255,255,255);
-    padding: 2px;
+    border-color: rgb(0,0,0);
+    padding: 3px;
 }
 
 .change-margin-title{
@@ -84,6 +92,9 @@
     .home-picture div{
         flex: .2;
     }
+    .home-title .item-title{
+        flex: 2;
+    }
 }
 @media screen and (max-width: 900px){
     .home-picture .profile-pic{
@@ -95,10 +106,18 @@
     .home-picture .box-paragraph{
         flex: 20;
     }
+    .home-picture{
+        height: 60vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
     .image-holder:hover{
         height: 220px;
         width: 180px;
         filter: none;
         -webkit-filter: none;
-    }    
+    }
+    .home-title .item-title{
+        flex: 16;
+    }
 }

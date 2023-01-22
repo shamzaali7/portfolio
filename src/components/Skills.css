@@ -29,6 +29,7 @@
 .skill-type{
   color: rgb(255,255,255);
   font-size: 20px;
+  margin-top: 2px;
 }
 
 .display-skills .holder-skills{
@@ -38,6 +39,7 @@
 .names{
   background-color: rgb(51 65 85);
   border-radius: 6px;
-  border-color: white;
+  border-color: rgb(0,0,0);
   border-width: 2px;
+  padding: 2px;
 }

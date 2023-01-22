@@ -7,11 +7,13 @@ import Skills from './components/Skills';
 import Resume from './components/Resume';
 import AboutMe from './components/AboutMe';
 import Navigation from './components/Navigation';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <div className="App">
       <Navigation/>
+      <Footer/>
       <main>
         <Routes>
           <Route path="/" element={<Home/>}/>

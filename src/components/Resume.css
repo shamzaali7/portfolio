@@ -26,3 +26,10 @@
     overflow-y: auto;
     text-align:justify;
 }
+
+@media screen and (max-width: 1010px){
+    .resume div.resume-d{
+        max-height: 400px;
+        flex: 3
+    }
+}
