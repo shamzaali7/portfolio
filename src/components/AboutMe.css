@@ -92,3 +92,9 @@
   padding: 3px;
   background-color: rgba(255,255,255,0.4);
 }
+
+@media screen and (max-width: 1280px){
+  .container-about-me .about-des{
+    flex: 5;
+  }
+}
