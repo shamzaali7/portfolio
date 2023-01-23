@@ -36,7 +36,7 @@ function Projects(){
                         <span className="project-des">
                             <p className="skill-type names">THE CONNECTIONS KEEPER</p>
                             <p>
-                                A virvtual rolodex with a contact interface allowing full CRUD functionality joining a front-end built in Javascript and CSS through React on a GitHub Repository, and deployed on Vercel incorporating CI/CD. Includes a back-end built in Node.js and Express on a GitHub repository, connected to a MongoDB database and deployed on Heroku. 
+                                A group porject featuring a virvtual rolodex with a contact interface allowing full CRUD functionality joining a front-end built in Javascript and CSS through React on a GitHub Repository, and deployed on Vercel incorporating CI/CD. Includes a back-end built in Node.js and Express on a GitHub repository, connected to a MongoDB database and deployed on Heroku. 
                             </p>
                             <p><a className="text-lime-400" href="https://connection-frontend-api.vercel.app/main" target="_blank" rel="noreferrer">Front-End Deployed |</a><a className="text-lime-400" href="https://github.com/shamzaali7/connection-frontend-api" target="_blank" rel="noreferrer"> Repository</a></p>
                             <p><a className="text-lime-400" href="https://connection-backend-api.herokuapp.com/api/contact" target="_blank" rel="noreferrer">Back-End Deployed |</a> <a className="text-lime-400" href="https://github.com/shamzaali7/connection-backend-api" target="_blank" rel="noreferrer">Repository</a></p>
