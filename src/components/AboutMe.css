@@ -45,6 +45,10 @@
   justify-content: center;
 }
 
+.contact-form{
+  margin-top: 10px;
+}
+
 .contact-form div{
   flex: 1;
   text-align: center;
@@ -63,4 +67,28 @@
   flex: .2;
   font-size: 20px;
   margin-bottom: 60px;
+}
+
+.container-about-me .about-des{
+  flex: 2;
+  text-align: left;
+}
+
+.about-des{
+  display: flex;
+  flex-direction: column;
+  height: 65vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.about-des div{
+  flex: 1;
+}
+
+.about-des-box{
+  margin-bottom: 20px;
+  border-radius: 6px;
+  padding: 3px;
+  background-color: rgba(255,255,255,0.4);
 }
