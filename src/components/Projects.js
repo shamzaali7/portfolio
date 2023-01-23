@@ -7,8 +7,12 @@ function Projects(){
             <h1 className="project-title">Projects</h1>
             <div className="container-projects">
             <div className="container-one">
-                <div className="project-pic-one ml-5">
-                    <img src="https://i.imgur.com/YONhaHV.png" className="pic" alt="Pic of Proshare"/>
+                <div className="container-des">
+                    <div></div>
+                    <div className="project-pic-one ml-5">
+                        <img src="https://i.imgur.com/YONhaHV.png" className="pic" alt="Pic of Proshare"/>
+                    </div>
+                    <div></div>
                 </div>
                 <div className="last container-des">
                     <div></div>
@@ -40,13 +44,21 @@ function Projects(){
                     </div>
                     <div></div>
                 </div>
-                <div className="project-pic-two mr-5 last">
-                    <img src="https://i.imgur.com/l2w1dzt.png" className="pic" alt="Pic of Connections App"/>
+                <div className="container-des">
+                    <div></div>
+                    <div className="project-pic-two mr-5 last">
+                        <img src="https://i.imgur.com/l2w1dzt.png" className="pic" alt="Pic of Connections App"/>
+                    </div>
+                    <div></div>
                 </div>
             </div>
             <div className="container-three">
-                <div className="project-pic-three ml-5">
-                    <img src="https://i.imgur.com/KtrcGdU.png" className="pic" alt="Pic of NBA Comparison App"/>
+                <div className="container-des">
+                    <div></div>
+                    <div className="project-pic-three ml-5">
+                        <img src="https://i.imgur.com/KtrcGdU.png" className="pic" alt="Pic of NBA Comparison App"/>
+                    </div>
+                    <div></div>
                 </div>
                 <div className="last container-des">
                     <div></div>
@@ -76,8 +88,12 @@ function Projects(){
                     </div>
                     <div></div>
                 </div>
-                <div className="project-pic-four mr-5 mb-5 last">
-                    <img src="https://i.imgur.com/36kenBY.png" className="pic" alt="Pic of Spaceman" target="_blank" rel="noreferrer"/>
+                <div className="container-des">
+                    <div></div>
+                    <div className="project-pic-four mr-5 mb-5 last">
+                        <img src="https://i.imgur.com/36kenBY.png" className="pic" alt="Pic of Spaceman" target="_blank" rel="noreferrer"/>
+                    </div>
+                    <div></div>
                 </div>
             </div>
             </div>
