@@ -4,7 +4,6 @@ import {Link} from 'react-router-dom'
 function Navigation() {
 
     const [show, setShow] = useState(null);
-    const [profile, setProfile] = useState(false);
     return (
         <div className="bg-clr h-full w-full">
             {/* Code block starts */}

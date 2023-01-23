@@ -17,7 +17,7 @@ function Home(){
             <div className="home-picture">
                 <div className="buff left"></div>
                 <div className="profile-pic">
-                    <img src="https://i.imgur.com/hod9FLD.jpg" className="pro-pic image-holder about-description" alt="Picture of me"/>
+                    <img src="https://i.imgur.com/hod9FLD.jpg" className="pro-pic image-holder about-description" alt="me"/>
                 </div>
                 <div className="box-paragraph">
                     <h4 className="paragraph">
