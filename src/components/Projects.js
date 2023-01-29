@@ -81,7 +81,7 @@ function Projects(){
                         <span className="project-des">
                             <p className="skill-type names">SPACEMAN</p>
                             <p>
-                                A user-friendly hangman game incorporating audio effects and local storage built in vanilla Javascript, CSS, and HTML through Visual Studio Code on a GitHub repository, and deployed on Github Pages incorporating CI/CD.
+                                A user-friendly hangman game variation incorporating audio effects and local storage built in vanilla Javascript, CSS, and HTML through Visual Studio Code on a GitHub repository, and deployed on Github Pages incorporating CI/CD.
                             </p>
                             <p><a className="text-lime-400" href="https://shamzaali7.github.io/spaceman/" target="_blank" rel="noreferrer">Front-End Deployed |</a><a className="text-lime-400" href="https://github.com/shamzaali7/spaceman" target="_blank" rel="noreferrer"> Repository</a></p>
                         </span>

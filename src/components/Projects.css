@@ -22,9 +22,14 @@
   justify-content: center;
 }
 
-.container-one div, .container-two div, .container-three div, .container-four div{
+.container-one div{
   flex: 1;
-  margin-top: 50px;
+  margin-top: 40px;
+}
+
+.container-two div, .container-three div, .container-four div{
+  flex: 1;
+  margin-top: 25px;
 }
 
 .container-des div{
