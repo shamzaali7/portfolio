@@ -22,8 +22,8 @@ function Projects(){
                             <p>
                                 A project sharing platform for developers containing full CRUD functionality and a google-auth based user model joining a front-end built in Javascript and CSS through React on a GitHub Repository, and deployed on AWS Amplify and Netlify incorporating CI/CD. Includes a back-end built in Node.js and Express on a GitHub repository, connected to a MongoDB database and deployed on Heroku.
                             </p>
-                            <p><a className="text-lime-400" href="https://main.d2onbrm7luopll.amplifyapp.com" target="_blank" rel="noreferrer">Front-End Deployed |</a>	<a className="text-lime-400" href="https://github.com/shamzaali7/proshare-frontend" target="_blank" rel="noreferrer">Repository</a></p>
-                            <p><a className="text-lime-400" href="https://proshare-backend.herokuapp.com/api/projects" target="_blank" rel="noreferrer">Back-End Deployed |</a> <a className="text-lime-400" href="https://github.com/shamzaali7/proshare-backend" target="_blank" rel="noreferrer">Repository</a></p>
+                            <p><a className="text-lime-400" href="https://main--proshares.netlify.app/" target="_blank" rel="noreferrer">Front-End Deployed |</a>	<a className="text-lime-400" href="https://github.com/shamzaali7/proshare-frontend" target="_blank" rel="noreferrer">Repository</a></p>
+                            <p><a className="text-lime-400" href="https://proshare-backend-27b5d2fdd236.herokuapp.com/api/projects" target="_blank" rel="noreferrer">Back-End Deployed |</a> <a className="text-lime-400" href="https://github.com/shamzaali7/proshare-backend" target="_blank" rel="noreferrer">Repository</a></p>
                         </span>
                     </div>
                     <div></div>
@@ -39,7 +39,7 @@ function Projects(){
                                 A group project featuring a virtual rolodex with a contact interface allowing full CRUD functionality joining a front-end built in Javascript and CSS through React on a GitHub Repository, and deployed on Vercel incorporating CI/CD. Includes a back-end built in Node.js and Express on a GitHub repository, connected to a MongoDB database and deployed on Heroku. 
                             </p>
                             <p><a className="text-lime-400" href="https://connection-frontend-api.vercel.app/main" target="_blank" rel="noreferrer">Front-End Deployed |</a><a className="text-lime-400" href="https://github.com/shamzaali7/connection-frontend-api" target="_blank" rel="noreferrer"> Repository</a></p>
-                            <p><a className="text-lime-400" href="https://connection-backend-api.herokuapp.com/api/contact" target="_blank" rel="noreferrer">Back-End Deployed |</a> <a className="text-lime-400" href="https://github.com/shamzaali7/connection-backend-api" target="_blank" rel="noreferrer">Repository</a></p>
+                            <p><a className="text-lime-400" href="https://connection-backend-api-6e20c9e0ad2d.herokuapp.com/api/contact" target="_blank" rel="noreferrer">Back-End Deployed |</a> <a className="text-lime-400" href="https://github.com/shamzaali7/connection-backend-api" target="_blank" rel="noreferrer">Repository</a></p>
                         </span>
                     </div>
                     <div></div>
