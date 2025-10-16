@@ -1,9 +1,15 @@
 import React from 'react';
 import "./Home.css";
 import { usePortfolioData } from '../context/DataContext';
+import { useNavigate } from 'react-router-dom';
 
 function Home(){
     const { personal } = usePortfolioData();
+    const navigate = useNavigate();
+    
+    const handleSecretClick = () => {
+        navigate('/secret-game');
+    };
     
     return(
         <div className="home">
@@ -35,6 +41,12 @@ function Home(){
                 </div>
                 <div className="buff"></div>
             </div>
+            <button 
+                className="secret-game-button" 
+                onClick={handleSecretClick}
+                aria-hidden="true"
+                title="🎮"
+            />
         </div>
     )
 }
