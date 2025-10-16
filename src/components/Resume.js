@@ -3,12 +3,12 @@ import "./Resume.css";
 import { usePortfolioData } from '../context/DataContext';
 
 // Import resume images dynamically
-import resumeImg1 from '../images/Res pdf1.png';
-import resumeImg2 from '../images/Res pdf2.png';
+import resumeImg1 from '../images/Res_pdf1.png';
+import resumeImg2 from '../images/Res_pdf2.png';
 
 function Resume(){
     const { resume } = usePortfolioData();
-    const resumeImages = [resumeImg1, resumeImg2]; // Map to actual imports
+    const resumeImages = [resumeImg1, resumeImg2]; 
     
     return(
         <div className="resume">
