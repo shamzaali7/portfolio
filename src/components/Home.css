@@ -40,57 +40,12 @@
 
 .home-picture div{
     padding-top: 70px;
-}
-
-.home-picture .pic{
-
-}
-
-.home-picture .buff{
-    flex: .75;
-}
-
-.home-picture .buff.left{
-    flex: 1;
-}
-
-.name{
-    background-color: rgb(51 65 85);
-    border-radius: 6px;
-    border-width: 1.5px;
-    border-color: rgb(0,0,0);
-    padding: 3px;
-}
-
-.change-margin-title{
-    margin-left: 85px
-}
-
-.paragraph{
-    color: rgb(0,0,0);
-    border-radius: 8px;
-    border-width: 2px;
-    border-color: rgb(0,0,0);
-    padding: 2px;
-    background-color: rgba(255,255,255,0.3);
-}
-
-.image-holder{
-    margin-top: 30px;
-}
-
-.image-holder:hover{
-    height: 270px;
-    width: 180px;
-    filter: none;
-    -webkit-filter: none;
-}
-
+}                              
 .secret-game-button {
   position: absolute;
-  bottom: 11%; /* Adjust based on where the mouse is in your image */
-  right: 21%; /* Adjust based on where the mouse is in your image */
-  width: 40px; /* Size of clickable area */
+  bottom: 11%; 
+  right: 21%; 
+  width: 40px; 
   height: 35px;
   background: transparent;
   border: none;
@@ -100,24 +55,27 @@
   transition: opacity 0.3s;
 }
 
+/* Subtle hint when hovering - only slightly visible */
 .secret-game-button:hover {
-  opacity: 0.05;
-  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  opacity: 0.03;
+  background: radial-gradient(circle, rgba(138, 43, 226, 0.1) 0%, transparent 70%);
   cursor: pointer;
 }
 
+/* Very subtle glow effect on hover */
 .secret-game-button:hover::after {
-  content: '';
+  content: '⌨️';
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  font-size: 20px;
+  opacity: 0.1;
   pointer-events: none;
 }
+
+
+
 
 @media screen and (max-width: 1280px){
     .home-picture .box-paragraph, .home-picture .profile-pic{
