@@ -1,0 +1,116 @@
+{
+  "personal": {
+    "name": "Syed Hamza Ali",
+    "title": "Junior Software Engineer",
+    "email": "hamzaali7@yahoo.com",
+    "profileImage": "https://i.imgur.com/hod9FLD.jpg",
+    "bio": "I am an adaptive full-stack software engineer with knowledge in front-end and back-end development. I have a passion for coding and have completed multiple projects and certifications in the field from highschool to college that have assisted in the development of my technical knowledge. My motivation to pursue this passion was rekindled after taking a Java course last summer and realizing I really enjoy and feel comfortable with coding and all of its aspects. I aspire to pursue an occupation that can assist and progress my understanding of building scalable cloud applications.",
+    "social": {
+      "github": "https://github.com/shamzaali7",
+      "linkedin": "https://www.linkedin.com/in/hamza-ali7/"
+    }
+  },
+  "navigation": [
+    { "path": "/", "label": "Home", "icon": "home" },
+    { "path": "/projects", "label": "Projects" },
+    { "path": "/skills", "label": "Skills" },
+    { "path": "/resume", "label": "Resume" },
+    { "path": "/about-me", "label": "About Me" }
+  ],
+  "skills": {
+    "categories": [
+      {
+        "type": "LANGUAGES",
+        "items": ["Javascript", "SQL", "Python", "HTML", "CSS", "Java"]
+      },
+      {
+        "type": "PROFICIENCIES",
+        "items": ["Full-Stack Web Development", "Front-End Web Development", "Back-End Web Development", "React", "Node.js", "Express", "MongoDB", "NoSQL", "SQL", "Django", "Git", "Mocha", "Chai", "Heroku", "Vercel", "Fly", "Github Pages", "Postgres", "Database Architecture", "Data Structures", "Algorithms", "Version Control", "REST API", "Linux/Unix", "Optimization", "Agile Scrum Team", "Data Analysis", "Web Scraping"]
+      },
+      {
+        "type": "TOOLS",
+        "items": ["Microsoft Excel", "Microsoft Word", "Microsoft PowerPoint", "Windows 10", "Github", "zsh", "Slack"]
+      },
+      {
+        "type": "INTERPERSONAL LANGUAGES",
+        "items": ["Fluent in Urdu, English, Hindi", "Conversational in Punjabi and Spanish", "Literate in Arabic"]
+      }
+    ]
+  },
+  "projects": [
+    {
+      "id": 1,
+      "title": "PROSHARE",
+      "description": "A project sharing platform for developers containing full CRUD functionality and a google-auth based user model joining a front-end built in Javascript and CSS through React on a GitHub Repository, and deployed on AWS Amplify and Netlify incorporating CI/CD. Includes a back-end built in Node.js and Express on a GitHub repository, connected to a MongoDB database and deployed on Heroku.",
+      "image": "https://i.imgur.com/YONhaHV.png",
+      "links": {
+        "frontendDeploy": "https://main--proshares.netlify.app/",
+        "frontendRepo": "https://github.com/shamzaali7/proshare-frontend",
+        "backendDeploy": "https://proshare-backend-27b5d2fdd236.herokuapp.com/api/projects",
+        "backendRepo": "https://github.com/shamzaali7/proshare-backend"
+      },
+      "imagePosition": "left"
+    },
+    {
+      "id": 2,
+      "title": "THE CONNECTIONS KEEPER",
+      "description": "A group project featuring a virtual rolodex with a contact interface allowing full CRUD functionality joining a front-end built in Javascript and CSS through React on a GitHub Repository, and deployed on Vercel incorporating CI/CD. Includes a back-end built in Node.js and Express on a GitHub repository, connected to a MongoDB database and deployed on Heroku.",
+      "image": "https://i.imgur.com/l2w1dzt.png",
+      "links": {
+        "frontendDeploy": "https://connection-frontend-api.vercel.app/main",
+        "frontendRepo": "https://github.com/shamzaali7/connection-frontend-api",
+        "backendDeploy": "https://connection-backend-api-6e20c9e0ad2d.herokuapp.com/api/contact",
+        "backendRepo": "https://github.com/shamzaali7/connection-backend-api"
+      },
+      "imagePosition": "right"
+    },
+    {
+      "id": 3,
+      "title": "NBA STAT COMPARISON",
+      "description": "A player comparison app with updated stats incorporating the use of links and routes, and calling REST API's. Built in Javascript and CSS through React on a GitHub repository, and deployed on Vercel incorporating CI/CD.",
+      "image": "https://i.imgur.com/KtrcGdU.png",
+      "links": {
+        "frontendDeploy": "https://nba-stat-comparison.vercel.app/",
+        "frontendRepo": "https://github.com/shamzaali7/nba-stat-comparison"
+      },
+      "imagePosition": "left"
+    },
+    {
+      "id": 4,
+      "title": "SPACEMAN",
+      "description": "A user-friendly hangman game variation incorporating audio effects and local storage built in vanilla Javascript, CSS, and HTML through Visual Studio Code on a GitHub repository, and deployed on Github Pages incorporating CI/CD.",
+      "image": "https://i.imgur.com/36kenBY.png",
+      "links": {
+        "frontendDeploy": "https://shamzaali7.github.io/spaceman/",
+        "frontendRepo": "https://github.com/shamzaali7/spaceman"
+      },
+      "imagePosition": "right"
+    }
+  ],
+  "aboutMe": {
+    "sections": [
+      {
+        "id": 1,
+        "content": "My first introduction to code was when I enrolled in a computer science course my freshman year of highschool. The main language used was Visual-Basic. In my junior year of highschool I took a Java course that presented to me a more commonly used language and the basic concepts that surround it such as if/switch statements, for/while loops, and functions. This helped build my knowledge of perceiving and understanding code at an early stage and was a good segue into higher-level programming."
+      },
+      {
+        "id": 2,
+        "content": "The second semester of my freshman year of college I enrolled into a computer science class that taught Java at an upper level. It served as a refresher of the basics as well as introducing class based components and object-oriented programming. This was an important stage in the development of my programming fundamentals."
+      },
+      {
+        "id": 3,
+        "content": "In the summer of 2022, I took a Udemy course on Java that was the perfect refresher to bring me back to pace with everything I had previously learned. The course furthered my knowledge of object oriented programming, and was also my first introduction to API's and making simple fetch requests. It also provided me with an optimal level of preparation and was a perfect segue into the next step of my pursuit of building a career in software engineering."
+      },
+      {
+        "id": 4,
+        "content": "04 October, 2022, I enrolled into a software engineering bootcamp hosted by General Assembly. It was a 3 month long bootcamp with over 420 hours of hands-on experience with the software development lifecycle, full-stack development, multiple languages, frameworks/libraries, version-control system, object-oriented programming, API requests, JSON data, Databases, and other various technologies and deployment platforms. I am confident in my ability to use what I have learned and apply it in a production level setting."
+      }
+    ]
+  },
+  "resume": {
+    "images": [
+      "Res pdf1.png",
+      "Res pdf2.png"
+    ]
+  }
+}
