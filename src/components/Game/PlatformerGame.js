@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, useCallback } from 'react';
 import './PlatformerGame.css';
 import { useNavigate } from 'react-router-dom';
 
@@ -615,11 +615,11 @@ function PlatformerGame() {
     initializeLevel(level + 1);
   };
 
-  const checkForHighScore = () => {
+  const checkForHighScore = useCallback(() => {
     if (HighScoreManager.isHighScore(score)) {
       setShowNameInput(true);
     }
-  };
+  }, [score]);
 
   const submitHighScore = () => {
     if (playerName.trim()) {
@@ -630,14 +630,89 @@ function PlatformerGame() {
     }
   };
 
-  // Game loop
-  const gameLoop = () => {
+    // Input handling
+  const handleInput = (player, keysPressed) => {
+    if (keysPressed.current['ArrowLeft'] || keysPressed.current['a']) player.moveLeft();
+    if (keysPressed.current['ArrowRight'] || keysPressed.current['d']) player.moveRight();
+    if (keysPressed.current[' '] || keysPressed.current['ArrowUp'] || keysPressed.current['w']) player.jump();
+  };
+
+  const updateObjects = (player, platforms, coins, hazards, powerUps, particleSystem) => {
+    const gameStatus = player.update();
+    platforms.forEach(p => p.update());
+    coins.forEach(c => c.update());
+    hazards.forEach(h => h.update());
+    powerUps.forEach(pu => pu.update());
+    particleSystem.update();
+    return gameStatus;
+  };
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const runCollisions = (player, platforms, coins, hazards, powerUps) => {
+    checkPlatformCollisions(player, platforms);
+    checkCoinCollisions(player, coins);
+    checkHazardCollisions(player, hazards);
+    checkPowerUpCollisions(player, powerUps);
+  };
+
+    // Drawing
+  const drawScene = (ctx, player, platforms, coins, hazards, powerUps, particleSystem) => {
+    // Clear canvas
+    ctx.fillStyle = '#1e293b';
+    ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+
+    // Background
+    ctx.fillStyle = '#334155';
+    for (let i = 0; i < 5; i++) {
+        ctx.fillRect(i * 200 + 50, 50, 2, 2);
+        ctx.fillRect(i * 200 + 150, 100, 2, 2);
+    }
+
+    // Draw objects
+    platforms.forEach(p => p.draw(ctx));
+    hazards.forEach(h => h.draw(ctx));
+    coins.forEach(c => c.draw(ctx));
+    powerUps.forEach(pu => pu.draw(ctx));
+    particleSystem.draw(ctx);
+    player.draw(ctx);
+  };
+
+    // UI drawing
+  const drawUI = (ctx, score, level, comboMultiplier, timeBonus, player) => {
+    ctx.fillStyle = 'white';
+    ctx.font = 'bold 20px Arial';
+    ctx.fillText(`Score: ${score}`, 10, 30);
+    ctx.fillText(`Level: ${level}`, CANVAS_WIDTH - 100, 30);
+
+    if (comboMultiplier > 1) {
+        ctx.fillStyle = '#fbbf24';
+        ctx.font = 'bold 16px Arial';
+        ctx.fillText(`Combo x${comboMultiplier.toFixed(1)}`, 10, 55);
+    }
+
+    ctx.fillStyle = timeBonus > 500 ? 'white' : '#ef4444';
+    ctx.font = '14px Arial';
+    ctx.fillText(`Time Bonus: ${Math.floor(timeBonus)}`, CANVAS_WIDTH/2 - 50, 30);
+
+    ctx.font = '12px Arial';
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
+    ctx.fillText('Arrow Keys/WASD to move | Space/Up/W to jump | ESC to exit', 10, CANVAS_HEIGHT - 30);
+    ctx.fillText(`Reach the green platform! Avoid red hazards!`, 10, CANVAS_HEIGHT - 10);
+
+    if (player.powerUpTimer > 0) {
+        ctx.fillStyle = player.invincible ? '#ec4899' : '#06b6d4';
+        ctx.fillRect(10, 70, (player.powerUpTimer / 300) * 100, 5);
+    }
+  };
+
+    // Main game loop
+  const gameLoop = useCallback(() => {
     if (gameState !== 'playing') return;
 
     const canvas = canvasRef.current;
     if (!canvas) return;
-    
     const ctx = canvas.getContext('2d');
+
     const player = playerRef.current;
     const platforms = platformsRef.current;
     const coins = coinsRef.current;
@@ -645,83 +720,22 @@ function PlatformerGame() {
     const powerUps = powerUpsRef.current;
     const particleSystem = particleSystemRef.current;
 
-    // Clear canvas
-    ctx.fillStyle = '#1e293b';
-    ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+    handleInput(player, keysPressed);
+    const status = updateObjects(player, platforms, coins, hazards, powerUps, particleSystem);
 
-    // Draw background elements
-    ctx.fillStyle = '#334155';
-    for (let i = 0; i < 5; i++) {
-      ctx.fillRect(i * 200 + 50, 50, 2, 2);
-      ctx.fillRect(i * 200 + 150, 100, 2, 2);
+    if (status === 'gameOver') {
+        setGameState('gameOver');
+        checkForHighScore();
+        return;
     }
 
-    // Handle input
-    if (keysPressed.current['ArrowLeft'] || keysPressed.current['a']) player.moveLeft();
-    if (keysPressed.current['ArrowRight'] || keysPressed.current['d']) player.moveRight();
-    if (keysPressed.current[' '] || keysPressed.current['ArrowUp'] || keysPressed.current['w']) player.jump();
-
-    // Update game objects
-    const gameStatus = player.update();
-    if (gameStatus === 'gameOver') {
-      setGameState('gameOver');
-      checkForHighScore();
-      return;
-    }
-
-    platforms.forEach(platform => platform.update());
-    coins.forEach(coin => coin.update());
-    hazards.forEach(hazard => hazard.update());
-    powerUps.forEach(powerUp => powerUp.update());
-    particleSystem.update();
-
-    // Check collisions
-    checkPlatformCollisions(player, platforms);
-    checkCoinCollisions(player, coins);
-    checkHazardCollisions(player, hazards);
-    checkPowerUpCollisions(player, powerUps);
-
-    // Update time bonus
+    runCollisions(player, platforms, coins, hazards, powerUps);
     setTimeBonus(prev => Math.max(0, prev - 0.5));
 
-    // Draw everything
-    platforms.forEach(platform => platform.draw(ctx));
-    hazards.forEach(hazard => hazard.draw(ctx));
-    coins.forEach(coin => coin.draw(ctx));
-    powerUps.forEach(powerUp => powerUp.draw(ctx));
-    particleSystem.draw(ctx);
-    player.draw(ctx);
+    drawScene(ctx, player, platforms, coins, hazards, powerUps, particleSystem);
+    drawUI(ctx, score, level, comboMultiplier, timeBonus, player);
+  }, [gameState, score, level, comboMultiplier, timeBonus, checkForHighScore, runCollisions]);
 
-    // Draw UI
-    ctx.fillStyle = 'white';
-    ctx.font = 'bold 20px Arial';
-    ctx.fillText(`Score: ${score}`, 10, 30);
-    ctx.fillText(`Level: ${level}`, CANVAS_WIDTH - 100, 30);
-    
-    // Combo indicator
-    if (comboMultiplier > 1) {
-      ctx.fillStyle = '#fbbf24';
-      ctx.font = 'bold 16px Arial';
-      ctx.fillText(`Combo x${comboMultiplier.toFixed(1)}`, 10, 55);
-    }
-    
-    // Time bonus indicator
-    ctx.fillStyle = timeBonus > 500 ? 'white' : '#ef4444';
-    ctx.font = '14px Arial';
-    ctx.fillText(`Time Bonus: ${Math.floor(timeBonus)}`, CANVAS_WIDTH/2 - 50, 30);
-
-    // Instructions
-    ctx.font = '12px Arial';
-    ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
-    ctx.fillText('Arrow Keys/WASD to move | Space/Up/W to jump | ESC to exit', 10, CANVAS_HEIGHT - 30);
-    ctx.fillText(`Reach the green platform! Avoid red hazards!`, 10, CANVAS_HEIGHT - 10);
-    
-    // Power-up indicator
-    if (player.powerUpTimer > 0) {
-      ctx.fillStyle = player.invincible ? '#ec4899' : '#06b6d4';
-      ctx.fillRect(10, 70, (player.powerUpTimer / 300) * 100, 5);
-    }
-  };
 
   // Set up game loop
   useEffect(() => {
@@ -729,7 +743,7 @@ function PlatformerGame() {
     gameLoopRef.current = interval;
 
     return () => clearInterval(interval);
-  }, [gameState, comboMultiplier, level]);
+  }, [gameLoop]);
 
   // Handle keyboard input
   useEffect(() => {
