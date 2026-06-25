@@ -78,7 +78,7 @@
       ],
       "tags": ["Databricks", "PySpark", "XGBoost", "MLflow", "Delta Lake", "Python", "Unity Catalog"],
       "links": {
-        "repo": "https://github.com/shamzaali7"
+        "repo": "https://github.com/shamzaali7/retail-store-ETL"
       }
     },
     {
