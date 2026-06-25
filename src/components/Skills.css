@@ -1,45 +1,75 @@
-.skills{
-    background-image: url("../images/Home-Background.jpg");
-    height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-  }
-
-.skills div{
-  flex: 1;
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
-.skills div.buff{
-  flex: .2;
-  font-size: 20px;
+.skill-cat {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 26px;
+  transition: all 0.25s ease;
 }
 
-.box-skills{
+.skill-cat:hover {
+  border-color: var(--border-accent);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-2px);
+}
+
+.skill-cat__header {
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
 }
 
-.display-skills p{
-  text-align: center;
+.skill-cat__icon {
+  font-size: 1.2rem;
+  line-height: 1;
 }
 
-.skill-type{
-  color: rgb(255,255,255);
-  font-size: 20px;
-  margin-top: 2px;
+.skill-cat__name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
-.display-skills .holder-skills{
-  border-radius: 8px;
+.skill-cat__items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
 }
 
-.names{
-  background-color: rgb(51 65 85);
-  border-radius: 6px;
-  border-color: rgb(0,0,0);
-  border-width: 2px;
-  padding: 2px;
+.skill-chip {
+  display: inline-block;
+  padding: 5px 11px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+  cursor: default;
+}
+
+.skill-chip:hover {
+  color: var(--accent-blue);
+  border-color: var(--border-accent);
+  background: rgba(79, 156, 249, 0.06);
+}
+
+@media (max-width: 900px) {
+  .skills__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 560px) {
+  .skills__grid { grid-template-columns: 1fr; }
 }

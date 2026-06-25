@@ -1,0 +1,109 @@
+.contact {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border);
+  padding: 100px 24px 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact__bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.contact__orb {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(79, 156, 249, 0.08), transparent 65%);
+  border-radius: 50%;
+  top: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: blur(60px);
+}
+
+.contact__inner {
+  position: relative;
+  z-index: 1;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+}
+
+.contact__cta {
+  text-align: center;
+  max-width: 600px;
+}
+
+.contact__title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1.9rem, 4.5vw, 2.8rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 12px 0 16px;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.contact__title span {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.contact__subtitle {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-bottom: 32px;
+}
+
+.contact__email-btn {
+  font-size: 0.88rem;
+  letter-spacing: 0.01em;
+}
+
+.contact__social-row {
+  display: flex;
+  gap: 14px;
+}
+
+.contact__social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 20px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all 0.22s ease;
+}
+
+.contact__social-link:hover {
+  color: var(--accent-blue);
+  border-color: var(--border-accent);
+  background: rgba(79, 156, 249, 0.06);
+  transform: translateY(-2px);
+}
+
+.contact__divider {
+  width: 100%;
+  height: 1px;
+  background: var(--border);
+  max-width: var(--max-width);
+}
+
+.contact__copy {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}

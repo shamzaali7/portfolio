@@ -1,79 +1,50 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-body, html {
-  height: 100%;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
-  font-family: 'Crimson Text', serif;
-  font-size: 18px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background-color: #070e1c;
+  color: #e2e8f0;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: rgb(255,255,255);
+  overflow-x: hidden;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+::-webkit-scrollbar {
+  width: 5px;
 }
 
-.bg-clr{
-  position: relative;
-  background-image: url("./images/Home-Background.jpg");
-  background-color: rgba(0,0,0,0.5);
+::-webkit-scrollbar-track {
+  background: #070e1c;
 }
 
-.nav-bar-pos{
-  position: fixed;
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #4f9cf9, #7b61ff);
+  border-radius: 10px;
 }
 
-.home, .projects, .skills, .resume, .about-me{
-  padding-top: 75px;
-  color: rgb(0,0,0)
+::selection {
+  background: rgba(79, 156, 249, 0.3);
+  color: #fff;
 }
 
-.menu-items:hover{
-  color: rgb(255,255,255);
-  border-bottom-width: 2px;
-  border-bottom-color: rgb(255,255,255);
+a {
+  text-decoration: none;
 }
 
-.home{
-  background-image: url("./images/Home-Background.jpg");
-  height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+ul, ol {
+  list-style: none;
 }
 
-.ovlay{
-  background-image: none;
-  background-color: rgba(0,0,0,0.8);
-}
-
-@media screen and (max-width: 1280px){
-  .bg-clr{
-    position: absolute;
-  }
-  .home, .projects, .skills, .resume, .about-me{
-    position: relative;
-    padding-top: 75px;
-    color: white;
-  }
-  .menu-items:hover{
-    border-left-width: 2px;
-    border-left-color: rgb(255,255,255);
-    border-bottom-color: none;
-    border-bottom-width: 0;
-  }
-  .bg-mobile-clr{
-    background-image: none;
-    background-color: rgba(0,0,0,0.4);
-  }
-  .mobile-nav-down{
-    margin-top: 56px;
-  }
+img {
+  display: block;
+  max-width: 100%;
 }

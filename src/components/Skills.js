@@ -1,32 +1,30 @@
 import React from 'react';
-import "./Skills.css";
-import { usePortfolioData } from '../context/DataContext';
+import './Skills.css';
+import data from '../data/portfolio.json';
 
-function Skills(){
-    const { skills } = usePortfolioData();
-    
-    return(
-        <div className="skills">
-            <div className="buff"><span className="">Skills</span></div>
-            <div className="box-skills">
-                <div className="buff"></div>
-                <div className="display-skills">
-                    <div className="holder-skills about-description">
-                        {skills.categories.map((category, index) => (
-                            <p key={index}>
-                                <h6 className="skill-type">
-                                    <span className="names">{category.type}</span>
-                                </h6> 
-                                {category.items.join(", ")}
-                            </p>
-                        ))}
-                    </div>
-                </div>
-                <div className="buff"></div>
+export default function Skills() {
+  return (
+    <section className="section-wrap" id="skills">
+      <div className="section-header">
+        <span className="section-label">Capabilities</span>
+        <h2 className="section-title">Technical <span>Skills</span></h2>
+      </div>
+
+      <div className="skills__grid">
+        {data.skills.map(category => (
+          <div key={category.category} className="skill-cat">
+            <div className="skill-cat__header">
+              <span className="skill-cat__icon">{category.icon}</span>
+              <h3 className="skill-cat__name">{category.category}</h3>
             </div>
-            <div className="buff"></div>
-        </div>
-    )
+            <div className="skill-cat__items">
+              {category.items.map(skill => (
+                <span key={skill} className="skill-chip">{skill}</span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
 }
-
-export default Skills;

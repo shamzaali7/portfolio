@@ -1,0 +1,133 @@
+.timeline {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline__item {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 28px;
+}
+
+/* Left column: dot + line */
+.timeline__marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 28px;
+}
+
+.timeline__dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent-gradient);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.timeline__dot::after {
+  content: '';
+  position: absolute;
+  inset: -5px;
+  border-radius: 50%;
+  background: rgba(79, 156, 249, 0.15);
+}
+
+.timeline__line {
+  width: 2px;
+  flex: 1;
+  background: linear-gradient(to bottom, rgba(79, 156, 249, 0.35), rgba(79, 156, 249, 0.04));
+  margin-top: 6px;
+  min-height: 48px;
+}
+
+/* Card */
+.timeline__card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 32px;
+  margin-bottom: 28px;
+  transition: all 0.25s ease;
+}
+
+.timeline__card:hover {
+  border-color: var(--border-accent);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-3px);
+}
+
+.timeline__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 22px;
+  flex-wrap: wrap;
+}
+
+.timeline__role {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 5px;
+  letter-spacing: -0.01em;
+}
+
+.timeline__company {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent-blue);
+}
+
+.timeline__meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.timeline__location {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+/* Bullets */
+.timeline__bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.timeline__bullets li {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  padding-left: 20px;
+  position: relative;
+}
+
+.timeline__bullets li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-blue);
+  opacity: 0.55;
+}
+
+@media (max-width: 640px) {
+  .timeline__item { grid-template-columns: 32px 1fr; gap: 16px; }
+  .timeline__card { padding: 20px; margin-bottom: 20px; }
+  .timeline__header { flex-direction: column; }
+  .timeline__meta { align-items: flex-start; }
+}

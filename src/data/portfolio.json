@@ -1,116 +1,171 @@
 {
   "personal": {
     "name": "Syed Hamza Ali",
-    "title": "Junior Software Engineer",
-    "email": "hamzaali7@yahoo.com",
-    "profileImage": "https://i.imgur.com/hod9FLD.jpg",
-    "bio": "I am an adaptive full-stack software engineer with knowledge in front-end and back-end development. I have a passion for coding and have completed multiple projects and certifications in the field from highschool to college that have assisted in the development of my technical knowledge. My motivation to pursue this passion was rekindled after taking a Java course last summer and realizing I really enjoy and feel comfortable with coding and all of its aspects. I aspire to pursue an occupation that can assist and progress my understanding of building scalable cloud applications.",
+    "title": "AI/ML Engineer",
+    "email": "syedhamzaali978@gmail.com",
+    "location": "Westford, MA",
+    "phone": "978-590-9087",
+    "bio": "Harvard Data Science graduate building end-to-end intelligent systems — from PySpark pipelines to production LLM deployments. Specializing in ML, NLP, and MLOps.",
     "social": {
       "github": "https://github.com/shamzaali7",
       "linkedin": "https://www.linkedin.com/in/hamza-ali7/"
-    }
-  },
-  "navigation": [
-    { "path": "/", "label": "Home", "icon": "home" },
-    { "path": "/projects", "label": "Projects" },
-    { "path": "/skills", "label": "Skills" },
-    { "path": "/resume", "label": "Resume" },
-    { "path": "/about-me", "label": "About Me" }
-  ],
-  "skills": {
-    "categories": [
-      {
-        "type": "LANGUAGES",
-        "items": ["Javascript", "SQL", "Python", "HTML", "CSS", "Java"]
-      },
-      {
-        "type": "PROFICIENCIES",
-        "items": ["Full-Stack Web Development", "Front-End Web Development", "Back-End Web Development", "React", "Node.js", "Express", "MongoDB", "NoSQL", "SQL", "Django", "Git", "Mocha", "Chai", "Heroku", "Vercel", "Fly", "Github Pages", "Postgres", "Database Architecture", "Data Structures", "Algorithms", "Version Control", "REST API", "Linux/Unix", "Optimization", "Agile Scrum Team", "Data Analysis", "Web Scraping"]
-      },
-      {
-        "type": "TOOLS",
-        "items": ["Microsoft Excel", "Microsoft Word", "Microsoft PowerPoint", "Windows 10", "Github", "zsh", "Slack"]
-      },
-      {
-        "type": "INTERPERSONAL LANGUAGES",
-        "items": ["Fluent in Urdu, English, Hindi", "Conversational in Punjabi and Spanish", "Literate in Arabic"]
-      }
+    },
+    "roles": [
+      "AI/ML Engineer",
+      "Data Scientist",
+      "Harvard Data Science Graduate",
+      "Quantitative Researcher",
+      "Full-Stack Developer"
     ]
   },
+  "stats": [
+    { "value": "99.83%", "label": "BERT Model Accuracy" },
+    { "value": "96.81%", "label": "Sales Forecast R²" },
+    { "value": "3M+", "label": "Records Processed" },
+    { "value": "1.14", "label": "Sharpe Ratio (Capstone)" }
+  ],
+  "experience": [
+    {
+      "company": "DataAnnotation (SurgeAI)",
+      "role": "AI/ML Evaluation Engineer",
+      "type": "Contract · Remote",
+      "start": "April 2024",
+      "end": "Present",
+      "bullets": [
+        "Design and execute complex technical prompts to benchmark reasoning, coding accuracy, and instruction-following across frontier LLMs including Claude, Gemini CLI, Google Jules, and Cursor; evaluate multi-step agent performance across full codebases.",
+        "Develop custom tool suites for agent evaluation, assessing agents' ability to identify correct tools, query external APIs and databases, extract relevant data, and integrate results — across single-agent and multi-agent comparative frameworks.",
+        "Provide RLHF ground-truth solutions across Python, JavaScript, SQL, and Java; support Google as primary client on LLM training and evaluation projects spanning web development, data pipelines, and algorithmic domains."
+      ]
+    },
+    {
+      "company": "Lab USA",
+      "role": "Software Development Intern",
+      "type": "Haverhill, MA",
+      "start": "June 2023",
+      "end": "December 2023",
+      "bullets": [
+        "Collaborated with development, QA, and DBA teams to maintain lab information systems and deploy production code using Agile/Scrum methodology.",
+        "Resolved L2 & L3 ServiceNow tickets by analyzing issues, initiating bug fix processes, and writing SQL queries to generate reports supporting recovery from major incidents."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "school": "Harvard University",
+      "abbr": "H",
+      "degree": "Master of Liberal Arts in Data Science",
+      "location": "Cambridge, MA",
+      "graduated": "May 2026",
+      "coursework": ["Data Modeling", "Data Mining", "Computer Vision", "Deep Learning", "AI Ethics", "NLP", "Data Engineering for Analytics"]
+    },
+    {
+      "school": "University of Massachusetts, Amherst",
+      "abbr": "UMA",
+      "degree": "Bachelor of Science in Kinesiology (STEM)",
+      "location": "Amherst, MA",
+      "graduated": "May 2019",
+      "coursework": []
+    }
+  ],
+  "certifications": [
+    { "name": "Data Science & Analytics", "issuer": "MIT" },
+    { "name": "Software Engineering", "issuer": "General Assembly" },
+    { "name": "Data Structures & Algorithms", "issuer": "ZTM" }
+  ],
   "projects": [
     {
       "id": 1,
-      "title": "PROSHARE",
-      "description": "A project sharing platform for developers containing full CRUD functionality and a google-auth based user model joining a front-end built in Javascript and CSS through React on a GitHub Repository, and deployed on AWS Amplify and Netlify incorporating CI/CD. Includes a back-end built in Node.js and Express on a GitHub repository, connected to a MongoDB database and deployed on Heroku.",
-      "image": "https://i.imgur.com/YONhaHV.png",
+      "title": "Store Sales Forecasting Pipeline",
+      "subtitle": "Databricks Lakehouse · XGBoost · MLflow",
+      "description": "Architected a Medallion Architecture (Bronze/Silver/Gold) ETL pipeline processing 3M+ retail sales records with Databricks Delta Live Tables and PySpark. Engineered 20+ time-series features including multi-period lag features (1–90 days) and calendar signals. Implemented automated daily retraining via Databricks Jobs (DAG of 4 tasks) with MLflow for experiment tracking and champion/challenger model promotion.",
+      "metrics": [
+        { "value": "R²=96.81%", "label": "Model Accuracy" },
+        { "value": "3M+", "label": "Records Processed" },
+        { "value": "54 Stores", "label": "33 Product Families" }
+      ],
+      "tags": ["Databricks", "PySpark", "XGBoost", "MLflow", "Delta Lake", "Python", "Unity Catalog"],
       "links": {
-        "frontendDeploy": "https://main--proshares.netlify.app/",
-        "frontendRepo": "https://github.com/shamzaali7/proshare-frontend",
-        "backendDeploy": "https://proshare-backend-27b5d2fdd236.herokuapp.com/api/projects",
-        "backendRepo": "https://github.com/shamzaali7/proshare-backend"
-      },
-      "imagePosition": "left"
+        "repo": "https://github.com/shamzaali7"
+      }
     },
     {
       "id": 2,
-      "title": "THE CONNECTIONS KEEPER",
-      "description": "A group project featuring a virtual rolodex with a contact interface allowing full CRUD functionality joining a front-end built in Javascript and CSS through React on a GitHub Repository, and deployed on Vercel incorporating CI/CD. Includes a back-end built in Node.js and Express on a GitHub repository, connected to a MongoDB database and deployed on Heroku.",
-      "image": "https://i.imgur.com/l2w1dzt.png",
+      "title": "Conversational AI Customer Service Agent",
+      "subtitle": "BERT · FastAPI · Docker · Dialogflow",
+      "description": "Fine-tuned a BERT model (BertForSequenceClassification) on ~30K customer service utterances across 22 intent categories, achieving 99.83% accuracy — vs. 54.35% with a rule-based baseline. Built a Dockerized FastAPI serving layer with async request handling, exposing RESTful webhook endpoints for real-time Google Dialogflow integration. Published trained model to Hugging Face Hub.",
+      "metrics": [
+        { "value": "99.83%", "label": "Classification Accuracy" },
+        { "value": "0.998", "label": "Weighted F1-Score" },
+        { "value": "22", "label": "Intent Categories" }
+      ],
+      "tags": ["BERT", "Hugging Face", "FastAPI", "Docker", "Dialogflow", "PyTorch", "NLTK"],
       "links": {
-        "frontendDeploy": "https://connection-frontend-api.vercel.app/main",
-        "frontendRepo": "https://github.com/shamzaali7/connection-frontend-api",
-        "backendDeploy": "https://connection-backend-api-6e20c9e0ad2d.herokuapp.com/api/contact",
-        "backendRepo": "https://github.com/shamzaali7/connection-backend-api"
-      },
-      "imagePosition": "right"
+        "huggingface": "https://huggingface.co/shamzaali7"
+      }
     },
     {
       "id": 3,
-      "title": "NBA STAT COMPARISON",
-      "description": "A player comparison app with updated stats incorporating the use of links and routes, and calling REST API's. Built in Javascript and CSS through React on a GitHub repository, and deployed on Vercel incorporating CI/CD.",
-      "image": "https://i.imgur.com/KtrcGdU.png",
+      "title": "ETF-Era Bitcoin Exposure & Risk Forecasting",
+      "subtitle": "Harvard Capstone · Logit-Lasso · HAR-OLS · Published",
+      "description": "Harvard capstone research project co-authored with 4 contributors. Engineered a 2,212-observation financial panel across 136 features. Implemented expanding-window walk-forward validation evaluating 1,437+ out-of-sample forecasts using Diebold-Mariano and Clark-West tests. The dual-forecast strategy compressed maximum drawdown from -67% to -21% vs. buy-and-hold.",
+      "metrics": [
+        { "value": "1.14", "label": "Net Sharpe Ratio" },
+        { "value": "-21%", "label": "Max Drawdown (vs -67%)" },
+        { "value": "136", "label": "Features Engineered" }
+      ],
+      "tags": ["Python", "R", "Logit-Lasso", "HAR-OLS", "Time-Series", "Statsmodels", "Walk-Forward"],
       "links": {
-        "frontendDeploy": "https://nba-stat-comparison.vercel.app/",
-        "frontendRepo": "https://github.com/shamzaali7/nba-stat-comparison"
+        "doi": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/FNCWRR"
       },
-      "imagePosition": "left"
+      "doi": "DOI: 10.7910/DVN/FNCWRR"
     },
     {
       "id": 4,
-      "title": "SPACEMAN",
-      "description": "A user-friendly hangman game variation incorporating audio effects and local storage built in vanilla Javascript, CSS, and HTML through Visual Studio Code on a GitHub repository, and deployed on Github Pages incorporating CI/CD.",
-      "image": "https://i.imgur.com/36kenBY.png",
+      "title": "ProShare",
+      "subtitle": "MERN Stack · Socket.io · Full-Stack",
+      "description": "Full-stack developer social platform built on the MERN stack, owning the entire lifecycle from MongoDB schema design and Express REST API to React UI and deployment. Engineered a real-time 1-on-1 chat system with Socket.io featuring typing indicators, read receipts, and unread counts. Implemented a read-through cache pattern with background sync for message consistency against cold-start timeouts.",
+      "metrics": [
+        { "value": "MERN", "label": "Full Stack" },
+        { "value": "Socket.io", "label": "Real-Time Chat" },
+        { "value": "REST API", "label": "Architecture" }
+      ],
+      "tags": ["React", "Node.js", "Express", "MongoDB", "Socket.io", "Netlify", "Heroku"],
       "links": {
-        "frontendDeploy": "https://shamzaali7.github.io/spaceman/",
-        "frontendRepo": "https://github.com/shamzaali7/spaceman"
-      },
-      "imagePosition": "right"
+        "live": "https://main--proshares.netlify.app/",
+        "repo": "https://github.com/shamzaali7/proshare-frontend"
+      }
     }
   ],
-  "aboutMe": {
-    "sections": [
-      {
-        "id": 1,
-        "content": "My first introduction to code was when I enrolled in a computer science course my freshman year of highschool. The main language used was Visual-Basic. In my junior year of highschool I took a Java course that presented to me a more commonly used language and the basic concepts that surround it such as if/switch statements, for/while loops, and functions. This helped build my knowledge of perceiving and understanding code at an early stage and was a good segue into higher-level programming."
-      },
-      {
-        "id": 2,
-        "content": "The second semester of my freshman year of college I enrolled into a computer science class that taught Java at an upper level. It served as a refresher of the basics as well as introducing class based components and object-oriented programming. This was an important stage in the development of my programming fundamentals."
-      },
-      {
-        "id": 3,
-        "content": "In the summer of 2022, I took a Udemy course on Java that was the perfect refresher to bring me back to pace with everything I had previously learned. The course furthered my knowledge of object oriented programming, and was also my first introduction to API's and making simple fetch requests. It also provided me with an optimal level of preparation and was a perfect segue into the next step of my pursuit of building a career in software engineering."
-      },
-      {
-        "id": 4,
-        "content": "04, October, 2022, I enrolled into a software engineering bootcamp hosted by General Assembly. It was a 3 month long bootcamp with over 420 hours of hands-on experience with the software development lifecycle, full-stack development, multiple languages, frameworks/libraries, version-control system, object-oriented programming, API requests, JSON data, Databases, and other various technologies and deployment platforms. I am confident in my ability to use what I have learned and apply it in a production level setting."
-      }
-    ]
-  },
-  "resume": {
-    "images": [
-      "Res_pdf1.png",
-      "Res_pdf2.png"
-    ]
-  }
+  "skills": [
+    {
+      "category": "ML & AI",
+      "icon": "🤖",
+      "items": ["PyTorch", "TensorFlow", "Keras", "Scikit-learn", "XGBoost", "Transformers (BERT)", "NLTK", "Pandas", "NumPy", "Prompt Engineering"]
+    },
+    {
+      "category": "MLOps & Deployment",
+      "icon": "⚙️",
+      "items": ["MLflow", "FastAPI", "Docker", "GitHub Actions", "Databricks", "Delta Lake", "Hugging Face Hub", "CI/CD", "Git"]
+    },
+    {
+      "category": "Languages",
+      "icon": "💻",
+      "items": ["Python", "SQL", "R", "Scala", "Java", "JavaScript"]
+    },
+    {
+      "category": "Data Engineering",
+      "icon": "🗄️",
+      "items": ["PySpark", "Spark SQL", "Unity Catalog", "MongoDB", "PostgreSQL", "Delta Live Tables", "AutoLoader"]
+    },
+    {
+      "category": "Quantitative Methods",
+      "icon": "📊",
+      "items": ["Time-Series Analysis", "Walk-Forward Validation", "Logistic Regression", "Lasso / Ridge", "HAR Models", "Hypothesis Testing", "Statsmodels", "Portfolio Risk Management"]
+    },
+    {
+      "category": "Full-Stack",
+      "icon": "🌐",
+      "items": ["React", "Node.js", "Express", "MongoDB", "Socket.io", "REST APIs", "Netlify", "Heroku"]
+    }
+  ]
 }
