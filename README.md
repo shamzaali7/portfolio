@@ -21,18 +21,6 @@ Personal portfolio website for **Syed Hamza Ali**, Harvard Data Science graduate
 - **Google Fonts** — Inter (body) + Space Grotesk (headings/display)
 - **No CSS framework** — Pure CSS with animations and glass effects
 
-## Getting Started
-
-```bash
-# Install dependencies
-npm install
-
-# Start dev server
-npm start
-
-# Production build
-npm run build
-```
 
 ## Project Highlights
 
