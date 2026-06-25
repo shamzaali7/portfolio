@@ -21,7 +21,7 @@ export default function About() {
             I'm fluent in Python, SQL, R, and Scala, and have shipped production code across the full stack — from PySpark data pipelines on Databricks to BERT models served via Dockerized FastAPI to MERN full-stack applications.
           </p>
           <p>
-            I'm actively seeking full-time roles in AI/ML engineering, data science, and quantitative research where I can apply deep technical skills to impactful, high-stakes problems.
+            I'm actively seeking full-time roles in AI/ML engineering, data science, quantitative research, software engineering, and full-stack development where I can apply deep technical skills to impactful, high-stakes problems.
           </p>
         </div>
 

@@ -43,6 +43,7 @@ export default function Education() {
             <div key={i} className="cert-card">
               <div className="cert-card__issuer">{cert.issuer}</div>
               <div className="cert-card__name">{cert.name}</div>
+              {cert.date && <div className="cert-card__date">{cert.date}</div>}
             </div>
           ))}
         </div>

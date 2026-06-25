@@ -23,10 +23,10 @@ export default function Contact() {
       <div className="contact__inner">
         <div className="contact__cta">
           <span className="section-label">Get in Touch</span>
-          <h2 className="contact__title">Let's Build Something <span>Together</span></h2>
+          <h2 className="contact__title">Available for the <span>Right Opportunity</span></h2>
           <p className="contact__subtitle">
-            Open to full-time opportunities in AI/ML engineering, data science, and quantitative research.
-            If you have a role or project that could use strong technical execution, let's talk.
+            Actively seeking full-time roles in AI/ML engineering, data science, quantitative research, software engineering, and full-stack development.
+            If your team is working on technically demanding problems, I'd welcome the conversation.
           </p>
 
           <a href="mailto:syedhamzaali978@gmail.com" className="btn btn-primary contact__email-btn">

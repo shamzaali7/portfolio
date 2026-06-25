@@ -57,17 +57,10 @@
       "location": "Cambridge, MA",
       "graduated": "May 2026",
       "coursework": ["Data Modeling", "Data Mining", "Computer Vision", "Deep Learning", "AI Ethics", "NLP", "Data Engineering for Analytics"]
-    },
-    {
-      "school": "University of Massachusetts, Amherst",
-      "abbr": "UMA",
-      "degree": "Bachelor of Science in Kinesiology (STEM)",
-      "location": "Amherst, MA",
-      "graduated": "May 2019",
-      "coursework": []
     }
   ],
   "certifications": [
+    { "name": "Artificial Intelligence", "issuer": "Harvard Extension School", "date": "Jan 2026" },
     { "name": "Data Science & Analytics", "issuer": "MIT" },
     { "name": "Software Engineering", "issuer": "General Assembly" },
     { "name": "Data Structures & Algorithms", "issuer": "ZTM" }
@@ -100,6 +93,7 @@
       ],
       "tags": ["BERT", "Hugging Face", "FastAPI", "Docker", "Dialogflow", "PyTorch", "NLTK"],
       "links": {
+        "repo": "https://github.com/shamzaali7",
         "huggingface": "https://huggingface.co/shamzaali7"
       }
     },
