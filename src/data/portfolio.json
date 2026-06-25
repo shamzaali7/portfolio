@@ -93,7 +93,7 @@
       ],
       "tags": ["BERT", "Hugging Face", "FastAPI", "Docker", "Dialogflow", "PyTorch", "NLTK"],
       "links": {
-        "repo": "https://github.com/shamzaali7",
+        "repo": "https://github.com/shamzaali7/Customer-Service-Chatbot",
         "huggingface": "https://huggingface.co/shamzaali7"
       }
     },
